@@ -81,7 +81,7 @@
       toggle.setAttribute('aria-expanded', String(open));
       label.textContent = open ? 'Close' : 'Menu';
       document.documentElement.classList.toggle('nav-open', open);
-      main.inert = open; // keeps keyboard and screen-reader users out of the page behind the menu
+      main.inert = open; 
     }
 
     toggle.addEventListener('click', () => {
@@ -240,8 +240,6 @@
     };
   }
 
-  // Image slots (project screenshots, honors, About photo): each .shot shows a
-  // placeholder until its image loads, then reveals it and opens it in the viewer.
   function initShots(openLightbox) {
     const canOpen = typeof openLightbox === 'function';
 
