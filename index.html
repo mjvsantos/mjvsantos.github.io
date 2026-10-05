@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marc Santos — QA &amp; Web Dev</title>
+  <meta name="description" content="Portfolio of Marc Jansen V. Santos, QA Tester and BS Information Technology graduate (Cum Laude). I test, build, and improve web applications with a focus on reliability, usability, and precision.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#101317"> <!-- kept in sync with the theme by main.js -->
+
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Runs before the page paints: enables JS-only styles and applies the saved
+       theme (dark by default), so there is no flash of the wrong theme. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var theme = 'dark';
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') theme = saved;
+      } catch (e) {}
+      root.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">MJ SANTOS</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="site-nav__list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#honors">Honors</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="site-nav__actions">
+          <p class="availability">
+            <span class="availability__dot" aria-hidden="true"></span>
+            Available for QA Roles
+          </p>
+          <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+            <!-- Sun shows in dark mode (click for light); moon shows in light mode -->
+            <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+            <span class="theme-toggle__label">Theme</span>
+          </button>
+          <!-- download is ignored when opened from disk (file://); target="_blank" keeps the portfolio open then -->
+          <a class="btn btn--primary" href="assets/Marc_Santos-Resume.pdf" download target="_blank" rel="noopener">Résumé</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <figure class="hero__portrait">
+          <img src="assets/images/marc-santos.jpg" alt="Portrait of Marc Jansen Santos" width="480" height="600" fetchpriority="high" decoding="async">
+        </figure>
+
+        <div class="hero__content">
+          <p class="meta text-muted">Open to Work / Information Technology</p>
+          <h1 id="hero-title">Marc Jansen Santos</h1>
+          <p class="hero__role">BS Information Technology Graduate (Cum Laude)</p>
+          <p class="lead text-muted">Seeking opportunities to apply my technical skills, grow through real-world experience, and contribute to building better software.</p>
+
+          <div class="btn-group">
+            <a class="btn btn--primary" href="#work">Explore Work</a>
+            <a class="btn btn--secondary" href="assets/Marc_Santos-Resume.pdf" download target="_blank" rel="noopener">Download Résumé</a>
+          </div>
+
+          <dl class="telemetry">
+            <div>
+              <dt class="meta text-muted">Location</dt>
+              <dd>Las Piñas City, Philippines</dd>
+            </div>
+            <div>
+              <dt class="meta text-muted">Degree</dt>
+              <dd>BS Information Technology, San Beda College Alabang</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proven Impact -->
+    <section class="section section--bordered" id="impact" aria-labelledby="impact-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Documented results</p>
+          <h2 id="impact-title" class="reveal">Proven Impact</h2>
+        </div>
+
+        <ul class="metrics">
+          <li class="metric reveal">
+            <p class="metric__value">100+</p>
+            <p class="metric__label">UI &amp; Visual Defects Identified &amp; Documented</p>
+            <p class="metric__detail text-muted">Across four Magento 2 e-commerce websites.</p>
+          </li>
+          <li class="metric reveal">
+            <p class="metric__value">50+</p>
+            <p class="metric__label">Web Pages Validated</p>
+            <p class="metric__detail text-muted">Plus 50+ reported defects revalidated during regression testing.</p>
+          </li>
+          <li class="metric reveal">
+            <p class="metric__value">4</p>
+            <p class="metric__label">E-Commerce Magento 2 Websites Tested</p>
+            <p class="metric__detail text-muted">UI visual testing at 1902 Software Development Corporation.</p>
+          </li>
+          <li class="metric reveal">
+            <p class="metric__value">1.371</p>
+            <p class="metric__label">Final CGPA (Cum Laude)</p>
+            <p class="metric__detail text-muted">BS Information Technology, San Beda College Alabang.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Selected Work
+         Screenshot slots show their expected file name until the image exists, then
+         switch to it. Save images in assets/images/projects/. If a file has another
+         extension, change it in both src and data-path. Edit alt and caption to match.
+         Frame styles: shot--window for screenshots, shot--contain for documents,
+         plain for photos. Only publish images you may share, and use sample data. -->
+    <section class="section section--bordered section--tint" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Projects</p>
+          <h2 id="work-title" class="reveal">Selected Work</h2>
+          <p class="lead text-muted reveal">A QA internship and two development projects, and what I contributed to each.</p>
+        </div>
+
+        <!-- Project 01 -->
+        <article class="project reveal" id="project-1902" aria-labelledby="project-1902-title">
+          <header class="project__head">
+            <p class="meta text-muted">Project 01 / QA Internship</p>
+            <h3 id="project-1902-title">Magento 2 UI Testing &amp; Admin Module</h3>
+          </header>
+
+          <div class="project__grid">
+            <div class="project__intro">
+              <p class="project__summary">An internship covering UI testing and PHP development on Magento 2 e-commerce websites.</p>
+              <p class="project__facts">
+                <span>PHP/QA Intern</span>
+                <span>January 2026 – May 2026</span>
+                <span>1902 Software Development Corporation</span>
+              </p>
+            </div>
+
+            <div class="project__detail">
+              <ul class="dash-list">
+                <li>Tested four Magento 2 e-commerce websites, validating 50+ pages for layout, responsiveness and usability against design specifications.</li>
+                <li>Documented 100+ UI defects through staging and production validation, and revalidated 50+ fixes during regression testing.</li>
+                <li>Built a Magento 2 admin module in PHP with CRUD operations, custom routing, access control and an administrative grid.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies used">
+                <li>Magento 2</li>
+                <li>PHP</li>
+                <li>Docker</li>
+                <li>MySQL</li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="evidence evidence--2" aria-label="Project evidence">
+            <li>
+              <figure class="shot">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/1902-evidence-1.jpg">
+                  <img src="assets/images/projects/1902-evidence-1.jpg" alt="Group picture with my supervisor and project manager" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Group picture with my supervisor and project manager</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="shot shot--contain">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/1902-evidence-2.jpg">
+                  <img src="assets/images/projects/1902-evidence-2.jpg" alt="Certificate of completion" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Certificate of completion</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="project reveal" id="project-hydrolink" aria-labelledby="project-hydrolink-title">
+          <header class="project__head">
+            <p class="meta text-muted">Project 02 / Capstone</p>
+            <h3 id="project-hydrolink-title">Hydrolink</h3>
+          </header>
+
+          <div class="project__grid">
+            <div class="project__intro">
+              <p class="project__summary">A blockchain-powered smart water distribution system for four user roles: Admin, Attendant, Client and Sponsor.</p>
+              <p class="project__facts">
+                <span>Frontend and PHP developer</span>
+                <span>Team of 3</span>
+                <span>BSIT capstone, San Beda College Alabang</span>
+              </p>
+            </div>
+
+            <div class="project__detail">
+              <ul class="dash-list">
+                <li>Built the frontend and dashboards for all four roles, displaying MySQL data for consumption, refill, transaction and sponsorship records.</li>
+                <li>Developed the PHP operations for each role, including application approval and rejection, user management, audit logging, inquiries, QR-based water dispensing and file uploads.</li>
+                <li>Implemented session-based role access control, CSRF-protected forms and QR code authentication, and assisted in testing and debugging.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies used">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+              </ul>
+              <!-- Replace the href if your repository URL differs, or delete this paragraph if the repo is private. -->
+              <p class="project__link">
+                <a class="text-link" href="https://github.com/mjvsantos/Hydrolink_SmartWaterSystem" target="_blank" rel="noopener noreferrer">
+                  View on GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <ul class="evidence evidence--3" aria-label="Project evidence">
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/hydrolink-evidence-1.png">
+                  <img src="assets/images/projects/hydrolink-evidence-1.png" alt="Blockchain displaying transaction data" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Blockchain displaying transaction data</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/hydrolink-evidence-2.png">
+                  <img src="assets/images/projects/hydrolink-evidence-2.png" alt="Admin dashboard management center" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Admin dashboard management center</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/hydrolink-evidence-3.png">
+                  <img src="assets/images/projects/hydrolink-evidence-3.png" alt="Hydrolink client and sponsor application workflow" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Client and sponsor application workflow</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Project 03 -->
+        <article class="project reveal" id="project-sbca" aria-labelledby="project-sbca-title">
+          <header class="project__head">
+            <p class="meta text-muted">Project 03 / Academic Project</p>
+            <h3 id="project-sbca-title">SBCA Clinic Management System</h3>
+          </header>
+
+          <div class="project__grid">
+            <div class="project__intro">
+              <p class="project__summary">A web-based school clinic system for managing student health records and vaccinations.</p>
+              <p class="project__facts">
+                <span>Developer</span>
+                <span>Academic project, San Beda College Alabang</span>
+              </p>
+            </div>
+
+            <div class="project__detail">
+              <ul class="dash-list">
+                <li>Developed the Student Health Records module with full CRUD operations and search.</li>
+                <li>Built the Vaccinations module to record and update multi-dose dates, findings and treatment.</li>
+                <li>Implemented secure admin login with hashed passwords, failed-login tracking and session-based access control, and designed the admin dashboards.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies used">
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git/GitHub</li>
+              </ul>
+              <!-- Replace the href if your repository URL differs, or delete this paragraph if the repo is private. -->
+              <p class="project__link">
+                <a class="text-link" href="https://github.com/mjvsantos/SBCA_ClinicManagementSystem" target="_blank" rel="noopener noreferrer">
+                  View on GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <ul class="evidence evidence--3" aria-label="Project evidence">
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/sbca-evidence-1.png">
+                  <img src="assets/images/projects/sbca-evidence-1.png" alt="Student Health Records module with search" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Student Health Records module with CRUD and search</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/sbca-evidence-2.png">
+                  <img src="assets/images/projects/sbca-evidence-2.png" alt="Vaccinations module recording multi-dose vaccination data" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Vaccinations module with multi-dose records</figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="shot shot--window">
+                <button class="shot__frame" type="button" disabled data-path="assets/images/projects/sbca-evidence-3.png">
+                  <img src="assets/images/projects/sbca-evidence-3.png" alt="Admin login and dashboard of the clinic system" width="1600" height="1000" loading="lazy" decoding="async">
+                </button>
+                <figcaption>Secure admin login and dashboards</figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Technical Skills
+         Icons are in assets/icons/skills/ and are decorative (empty alt) because the
+         skill name sits beside them. -->
+    <section class="section section--bordered" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Capabilities</p>
+          <h2 id="skills-title" class="reveal">Technical Skills</h2>
+        </div>
+
+        <div class="skills reveal">
+          <div class="skill-group">
+            <h3>QA &amp; Testing</h3>
+            <ul class="tags tags--icons">
+              <li><img src="assets/icons/skills/jira.svg" alt="">Jira</li>
+              <li><img src="assets/icons/skills/zephyr-scale.svg" alt="">Zephyr Scale</li>
+              <li><img src="assets/icons/skills/qase.svg" alt="">Qase</li>
+              <li><img src="assets/icons/skills/trello.svg" alt="">Trello</li>
+              <li><img src="assets/icons/skills/manual-testing.svg" alt="">Manual Testing</li>
+              <li><img src="assets/icons/skills/functional-testing.svg" alt="">Functional Testing</li>
+              <li><img src="assets/icons/skills/ui-visual-testing.svg" alt="">UI/Visual Testing</li>
+              <li><img src="assets/icons/skills/responsive-testing.svg" alt="">Responsive Testing</li>
+              <li><img src="assets/icons/skills/regression-testing.svg" alt="">Regression Testing</li>
+              <li><img src="assets/icons/skills/test-case-design.svg" alt="">Test Case Design</li>
+              <li><img src="assets/icons/skills/defect-reporting.svg" alt="">Defect Reporting &amp; Tracking</li>
+              <li><img src="assets/icons/skills/sdlc.svg" alt="">SDLC</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Development</h3>
+            <ul class="tags tags--icons">
+              <li><img src="assets/icons/skills/php.svg" alt="">PHP</li>
+              <li><img src="assets/icons/skills/python.svg" alt="">Python</li>
+              <li><img src="assets/icons/skills/java.svg" alt="">Java</li>
+              <li><img src="assets/icons/skills/csharp.svg" alt="">C#</li>
+              <li><img src="assets/icons/skills/javascript.svg" alt="">JavaScript</li>
+              <li><img src="assets/icons/skills/html5.svg" alt="">HTML5</li>
+              <li><img src="assets/icons/skills/css3.svg" alt="">CSS3</li>
+              <li><img src="assets/icons/skills/bootstrap.svg" alt="">Bootstrap</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <ul class="tags tags--icons">
+              <li><img src="assets/icons/skills/sql.svg" alt="">SQL</li>
+              <li><img src="assets/icons/skills/mysql.svg" alt="">MySQL</li>
+              <li><img src="assets/icons/skills/sql-server.svg" alt="">SQL Server</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools &amp; Platforms</h3>
+            <ul class="tags tags--icons">
+              <li><img src="assets/icons/skills/magento.svg" alt="">Magento 2</li>
+              <li><img src="assets/icons/skills/docker.svg" alt="">Docker</li>
+              <li><img src="assets/icons/skills/github.svg" alt="">Git/GitHub</li>
+              <li><img src="assets/icons/skills/vscode.svg" alt="">VS Code</li>
+              <li><img src="assets/icons/skills/xampp.svg" alt="">XAMPP</li>
+              <li><img src="assets/icons/skills/ssms.svg" alt="">SQL Server Management Studio</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Decorative ticker, hidden from screen readers. main.js duplicates this
+             list so the loop is seamless; edit only this one list. -->
+        <div class="ticker reveal" aria-hidden="true">
+          <div class="ticker__track">
+            <ul class="ticker__list">
+              <li>Jira</li>
+              <li>Zephyr Scale</li>
+              <li>Qase</li>
+              <li>Manual Testing</li>
+              <li>Functional Testing</li>
+              <li>UI/Visual Testing</li>
+              <li>Responsive Testing</li>
+              <li>Regression Testing</li>
+              <li>Test Case Design</li>
+              <li>Defect Reporting &amp; Tracking</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C#</li>
+              <li>JavaScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>SQL</li>
+              <li>MySQL</li>
+              <li>Magento 2</li>
+              <li>Docker</li>
+              <li>Git/GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education
+         Each logo slot shows a generic icon until its file exists (assets/images/logos/:
+         1902.png, san-beda.png, st-paul.png). If a file is not a .png, change its src. -->
+    <section class="section section--bordered" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Background</p>
+          <h2 id="experience-title" class="reveal">Experience &amp; Education</h2>
+        </div>
+
+        <div class="timeline-groups">
+          <div class="timeline-group reveal">
+            <h3>Experience</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="meta text-muted">January 2026 – May 2026</p>
+                <div class="timeline__head">
+                  <span class="logo">
+                    <img class="logo__img" src="assets/images/logos/1902.png" alt="" width="56" height="56" decoding="async">
+                    <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M12 6h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/><path d="M8 6h.01"/><path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="timeline__title">PHP/QA Intern</h4>
+                    <p class="timeline__org">1902 Software Development Corporation, Muntinlupa City, Philippines</p>
+                  </div>
+                </div>
+                <p class="timeline__lede">An internship that combined QA testing and PHP development on Magento 2 e-commerce websites. <a class="contact-link" href="#project-1902">See this project</a>.</p>
+                <ul class="dash-list">
+                  <li>Executed UI visual testing across four Magento 2 e-commerce websites, validating 50+ web pages for layout, responsiveness, and usability against design specifications.</li>
+                  <li>Identified and documented 100+ UI defects through staging and production validation and design comparison, allowing developers to resolve issues before deployment.</li>
+                  <li>Revalidated 50+ reported defects after fixes and flagged recurring issues during regression testing.</li>
+                  <li>Built a Magento 2 admin module in PHP with CRUD operations, custom routing, access control, database integration, and an administrative grid.</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies used">
+                  <li>Magento 2</li>
+                  <li>PHP</li>
+                  <li>Docker</li>
+                  <li>MySQL</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="timeline-group reveal">
+            <h3>Education</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <p class="meta text-muted">2022 – 2026</p>
+                <div class="timeline__head">
+                  <span class="logo">
+                    <img class="logo__img" src="assets/images/logos/san-beda.png" alt="" width="56" height="56" decoding="async">
+                    <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="timeline__title">BS Information Technology (Cum Laude)</h4>
+                    <p class="timeline__org">San Beda College Alabang</p>
+                  </div>
+                </div>
+                <p class="timeline__note"><span class="text-muted">Coursework:</span> Application Development, Database Management Systems, Web System and Technology, Capstone and Research</p>
+              </li>
+              <li class="timeline__item">
+                <p class="meta text-muted">2013 – 2020</p>
+                <div class="timeline__head">
+                  <span class="logo">
+                    <img class="logo__img" src="assets/images/logos/st-paul.png" alt="" width="56" height="56" decoding="async">
+                    <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M18 4.933V21"/><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/><path d="M6 4.933V21"/><circle cx="12" cy="9" r="2"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="timeline__title">St. Paul College of Parañaque</h4>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Honors & Awards
+         Image slots work like the project screenshots. Save files in assets/images/honors/:
+         cum-laude-medal.jpg, dean-list.jpg, annual-honor-roll.jpg. -->
+    <section class="section section--bordered" id="honors" aria-labelledby="honors-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Recognition</p>
+          <h2 id="honors-title" class="reveal">Honors &amp; Awards</h2>
+          <p class="lead text-muted reveal">Academic recognition from San Beda College Alabang.</p>
+        </div>
+
+        <ul class="honors">
+          <li class="honor reveal">
+            <figure class="shot">
+              <button class="shot__frame" type="button" disabled data-path="assets/images/honors/cum-laude-medal.jpg">
+                <img src="assets/images/honors/cum-laude-medal.jpg" alt="Marc Jansen Santos holding his Cum Laude medal" width="1200" height="900" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="visually-hidden">Photo holding my Cum Laude medal</figcaption>
+            </figure>
+            <h3>Cum Laude</h3>
+            <p class="honor__detail">BS Information Technology, San Beda College Alabang, 2026</p>
+            <p class="honor__stat">
+              <span class="meta text-muted">Final CGPA</span>
+              <span class="honor__figure">1.371</span>
+            </p>
+          </li>
+
+          <li class="honor reveal">
+            <figure class="shot shot--contain">
+              <button class="shot__frame" type="button" disabled data-path="assets/images/honors/dean-list.jpg">
+                <img src="assets/images/honors/dean-list.jpg" alt="Dean's List recognition" width="1200" height="900" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="visually-hidden">Dean's List recognition</figcaption>
+            </figure>
+            <h3>Dean's List</h3>
+            <p class="honor__detail">AY 2022–2024 and 1st Sem AY 2025–2026</p>
+          </li>
+
+          <li class="honor reveal">
+            <figure class="shot shot--contain">
+              <button class="shot__frame" type="button" disabled data-path="assets/images/honors/annual-honor-roll.jpg">
+                <img src="assets/images/honors/annual-honor-roll.jpg" alt="Dean's Annual Honor Roll recognition" width="1200" height="900" loading="lazy" decoding="async">
+              </button>
+              <figcaption class="visually-hidden">Dean's Annual Honor Roll recognition</figcaption>
+            </figure>
+            <h3>Dean's Annual Honor Roll</h3>
+            <p class="honor__detail">AY 2022–2024</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications
+         main.js adds the buttons to each row:
+           Expand  appears when the image in data-cert exists (assets/certificates/;
+                   change the extension there if yours is a .png).
+           Visit   appears when data-credly holds an https link.
+         Delete a row's data-cert if you will not add an image for it.
+         Category logos are optional: assets/images/logos/certiport.png, cisco.png,
+         microsoft.png, professional.png. -->
+    <section class="section section--bordered" id="certifications" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="meta text-muted reveal">Credentials</p>
+          <h2 id="certifications-title" class="reveal">Certifications</h2>
+        </div>
+
+        <div class="cert-grid">
+
+          <div class="cert-group reveal">
+            <div class="cert-group__head">
+              <span class="logo">
+                <img class="logo__img" src="assets/images/logos/certiport.png" alt="" width="48" height="48" decoding="async">
+                <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg>
+              </span>
+              <h3>Certiport</h3>
+            </div>
+            <ul class="cert-list">
+              <li class="cert" data-cert="assets/certificates/certiport-software-development.jpg" data-credly="https://www.credly.com/badges/ba1dce6b-db48-461f-a466-f594179cef28/public_url">
+                <p class="cert__name">IT Specialist: Software Development</p>
+                <p class="cert__date text-muted">May 2024</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/certiport-java.jpg" data-credly="https://www.credly.com/badges/0f081806-01a1-4d86-8fac-ebecf7520c34/public_url">
+                <p class="cert__name">IT Specialist: Java</p>
+                <p class="cert__date text-muted">Nov 2023</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/certiport-python.jpg" data-credly="https://www.credly.com/badges/a0d36485-d7cf-4c26-a665-22ba5966e330/public_url">
+                <p class="cert__name">IT Specialist: Python</p>
+                <p class="cert__date text-muted">May 2024</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/certiport-databases.jpg" data-credly="https://www.credly.com/badges/c6aa01ec-8e68-42f9-9aac-772f910cfdac/public_url">
+                <p class="cert__name">IT Specialist: Databases</p>
+                <p class="cert__date text-muted">May 2024</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/certiport-html-css.jpg" data-credly="https://www.credly.com/badges/d46437a7-5b9f-4376-94a4-5d406f479e74/public_url">
+                <p class="cert__name">IT Specialist: HTML &amp; CSS</p>
+                <p class="cert__date text-muted">Apr 2025</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-group reveal">
+            <div class="cert-group__head">
+              <span class="logo">
+                <img class="logo__img" src="assets/images/logos/cisco.png" alt="" width="48" height="48" decoding="async">
+                <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+              </span>
+              <h3>Cisco</h3>
+            </div>
+            <ul class="cert-list">
+              <li class="cert" data-cert="assets/certificates/cisco-data-science-python.jpg" data-credly="https://www.credly.com/badges/472f3957-5864-460a-bad9-8e2b01ce0eab/public_url">
+                <p class="cert__name">Data Science Essentials with Python</p>
+                <p class="cert__date text-muted">Apr 2026</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/cisco-ccst-it-support.jpg" data-credly="https://www.credly.com/badges/7992377e-7140-4ca9-8011-c1b22bbe8806/public_url">
+                <p class="cert__name">CCST: IT Support</p>
+                <p class="cert__date text-muted">Apr 2025</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/cisco-ccst-cybersecurity.jpg" data-credly="https://www.credly.com/badges/83db2c4e-45de-4731-ab23-1b99147c0e2d/public_url">
+                <p class="cert__name">CCST: Cybersecurity</p>
+                <p class="cert__date text-muted">Apr 2025</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/cisco-ccst-networking.jpg" data-credly="https://www.credly.com/badges/28a5edd8-c766-4b98-8967-45aac565a945/public_url">
+                <p class="cert__name">CCST: Networking</p>
+                <p class="cert__date text-muted">Apr 2025</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-group reveal">
+            <div class="cert-group__head">
+              <span class="logo">
+                <img class="logo__img" src="assets/images/logos/microsoft.png" alt="" width="48" height="48" decoding="async">
+                <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M3 12h18"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+              </span>
+              <h3>Microsoft</h3>
+            </div>
+            <ul class="cert-list">
+              <li class="cert" data-cert="assets/certificates/microsoft-azure-data-fundamentals.jpg" data-credly="https://www.credly.com/badges/45b1ebae-ca81-4f9b-bcda-e2ca48eeeb0c/public_url">
+                <p class="cert__name">Azure Data Fundamentals</p>
+                <p class="cert__date text-muted">Jan 2025</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/microsoft-azure-fundamentals.jpg" data-credly="https://www.credly.com/badges/3c539968-8673-43ee-abe4-08a7455bdf85/public_url">
+                <p class="cert__name">Azure Fundamentals</p>
+                <p class="cert__date text-muted">Nov 2024</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-group reveal">
+            <div class="cert-group__head">
+              <span class="logo">
+                <img class="logo__img" src="assets/images/logos/professional.png" alt="" width="48" height="48" decoding="async">
+                <svg class="logo__fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+              </span>
+              <h3>Professional</h3>
+            </div>
+            <ul class="cert-list">
+              <li class="cert" data-cert="assets/certificates/pmi-project-management-ready.jpg" data-credly="https://www.credly.com/badges/d1f08eb0-f871-4abd-b81d-cd24ae279590/public_url">
+                <p class="cert__name">PMI Project Management Ready</p>
+                <p class="cert__date text-muted">Valid through 2031</p>
+              </li>
+              <li class="cert" data-cert="assets/certificates/comptia-itf-plus.jpg" data-credly="https://www.credly.com/badges/3120dacc-d243-4f78-9445-25d802b20c41/public_url">
+                <p class="cert__name">CompTIA IT Fundamentals (ITF+)</p>
+                <p class="cert__date text-muted">Jan 2023</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About
+         The photo is optional: save it as assets/images/about/me.jpg, or delete the
+         <figure> to remove the slot. -->
+    <section class="section section--bordered" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__intro">
+          <p class="meta text-muted reveal">About me</p>
+          <h2 id="about-title" class="reveal">Beyond the code</h2>
+          <p class="lead text-muted reveal">I am adaptable and committed to continuous learning. This section shows how that appears in my work, and a little about me outside of it.</p>
+
+          <figure class="shot about__photo reveal">
+            <button class="shot__frame" type="button" disabled data-path="assets/images/about/me.jpg">
+              <img src="assets/images/about/me.jpg" alt="Marc Jansen Santos outside of work" width="1000" height="1250" loading="lazy" decoding="async">
+            </button>
+            <figcaption>Outside of work</figcaption>
+          </figure>
+          <p class="about__friends text-muted reveal">Friends describe me as kind, funny and caring.</p>
+        </div>
+
+        <div class="about__body">
+          <div class="about__block reveal">
+            <h3 class="meta text-muted">Why quality assurance</h3>
+            <p class="about__statement">I enjoy finding bugs, even when the work is repetitive, and I find it rewarding to contribute to the quality of a product.</p>
+          </div>
+
+          <div class="about__block">
+            <h3 class="meta text-muted reveal">How I work</h3>
+            <ul class="traits">
+              <li class="trait reveal">
+                <svg class="trait__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                <h3>Adaptability</h3>
+                <p>Switched between QA testing and PHP development during my internship, working across Magento 2, Docker and MySQL.</p>
+              </li>
+              <li class="trait reveal">
+                <svg class="trait__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v16"/><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></svg>
+                <h3>Willingness to learn</h3>
+                <p>Earned certifications across programming, databases, networking, cloud and project management.</p>
+              </li>
+              <li class="trait reveal">
+                <svg class="trait__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="1"/><path d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0"/></svg>
+                <h3>Attention to detail</h3>
+                <p>Documented 100+ UI defects across four websites and revalidated 50+ fixes.</p>
+              </li>
+              <li class="trait reveal">
+                <svg class="trait__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                <h3>Teamwork</h3>
+                <p>Built the Hydrolink capstone in a team of 3 and worked with developers so UI issues were fixed before deployment.</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about__block reveal">
+            <h3 class="meta text-muted">Feedback from my internship supervisor</h3>
+            <ul class="dash-list">
+              <li>Strong personality and confidence.</li>
+              <li>Follows instructions carefully.</li>
+              <li>Attentive and actively participates in discussions.</li>
+            </ul>
+          </div>
+
+          <div class="about__block reveal">
+            <h3 class="meta text-muted">Interests</h3>
+            <dl class="interests">
+              <div>
+                <dt>Video games</dt>
+                <dd>Valorant and Tekken.</dd>
+              </div>
+              <div>
+                <dt>Movies and series</dt>
+                <dd>Binge-watching shows and films, with The Office as a favorite.</dd>
+              </div>
+              <div>
+                <dt>Bowling</dt>
+                <dd>My favorite indoor sport.</dd>
+              </div>
+              <div>
+                <dt>Music</dt>
+                <dd>RINI, Mac Ayres and CAS, along with the K-pop group TWICE.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="about__block reveal">
+            <h3 class="meta text-muted">Looking ahead</h3>
+            <p class="about__statement">Over the next two to three years, I aim to strengthen my technical expertise to the point where I can also guide and teach others.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--bordered" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="contact__intro">
+            <p class="meta text-muted reveal">Contact</p>
+            <h2 id="contact-title" class="reveal">Let's build better, more reliable software together.</h2>
+            <p class="lead text-muted reveal">I am open to entry-level QA and software roles. Please send a message below or reach me directly.</p>
+
+            <dl class="contact-list reveal">
+              <div>
+                <dt class="meta text-muted">Email</dt>
+                <dd><a class="contact-link" href="mailto:santosmack06@gmail.com">santosmack06@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt class="meta text-muted">Phone</dt>
+                <dd><a class="contact-link" href="tel:+639496247905">+63 949 624 7905</a></dd>
+              </div>
+              <div>
+                <dt class="meta text-muted">Location</dt>
+                <dd>Las Piñas City, Philippines</dd>
+              </div>
+              <div>
+                <dt class="meta text-muted">LinkedIn</dt>
+                <dd><a class="contact-link" href="https://www.linkedin.com/in/marc-jansen-santos-308287380" target="_blank" rel="noopener noreferrer">linkedin.com/in/marc-jansen-santos-308287380<span class="visually-hidden"> (opens in a new tab)</span></a></dd>
+              </div>
+              <div>
+                <dt class="meta text-muted">GitHub</dt>
+                <dd><a class="contact-link" href="https://github.com/mjvsantos" target="_blank" rel="noopener noreferrer">github.com/mjvsantos<span class="visually-hidden"> (opens in a new tab)</span></a></dd>
+              </div>
+            </dl>
+
+            <noscript>
+              <p class="form-note text-muted">The contact form needs JavaScript. Please use the email link above instead.</p>
+            </noscript>
+          </div>
+
+          <!-- No backend: a valid submission opens the visitor's email app with the message prefilled -->
+          <form class="contact-form reveal" id="contact-form" novalidate data-to="santosmack06@gmail.com" aria-label="Contact form">
+            <div class="field">
+              <label class="field__label" for="contact-name">Name</label>
+              <input class="field__control" id="contact-name" name="name" type="text" autocomplete="name" required aria-describedby="contact-name-error">
+              <p class="field__error" id="contact-name-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-email">Email</label>
+              <input class="field__control" id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="contact-email-error">
+              <p class="field__error" id="contact-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-subject">Subject</label>
+              <input class="field__control" id="contact-subject" name="subject" type="text" autocomplete="off" required aria-describedby="contact-subject-error">
+              <p class="field__error" id="contact-subject-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="contact-message">Message</label>
+              <textarea class="field__control" id="contact-message" name="message" rows="6" maxlength="1500" required aria-describedby="contact-message-error"></textarea>
+              <p class="field__error" id="contact-message-error"></p>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" id="contact-status" role="status"></p>
+            <p class="form-note text-muted">Sending opens your email app with this message ready to send.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© 2026 Marc Jansen Santos. Always learning, always adapting.</p>
+      <ul class="site-footer__links">
+        <li><a href="mailto:santosmack06@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/marc-jansen-santos-308287380" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="https://github.com/mjvsantos" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Image viewer for screenshots, honors and certificates (native <dialog>:
+       Escape closes it and focus returns to the element that opened it) -->
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox__bar">
+      <button class="btn btn--secondary lightbox__close" type="button">Close</button>
+    </div>
+    <figure class="lightbox__figure">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption text-muted" id="lightbox-caption"></figcaption>
+    </figure>
+  </dialog>
+</body>
+</html>

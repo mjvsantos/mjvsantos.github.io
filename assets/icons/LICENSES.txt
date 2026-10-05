@@ -1,0 +1,9 @@
+Icons in assets/icons/skills/ come from three open-source sets.
+
+- Devicon (MIT): https://github.com/devicons/devicon  (full-color technology logos)
+- Simple Icons (CC0 1.0): https://github.com/simple-icons/simple-icons  (Qase and XAMPP, colored with their brand colors)
+- Lucide (ISC): https://github.com/lucide-icons/lucide  (generic testing/database glyphs, recolored)
+
+Brand names and logos (Jira, PHP, Python, Java, C#, JavaScript, HTML5, CSS3, Bootstrap, MySQL,
+Microsoft SQL Server, Magento, Docker, GitHub, Visual Studio Code, XAMPP, Trello, Qase) remain
+the property of their respective owners and are used here only to identify the technologies.
