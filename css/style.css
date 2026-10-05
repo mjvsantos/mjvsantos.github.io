@@ -1,23 +1,4 @@
-/* ==========================================================================
-   Global design system — "Gran Turismo × House Music"
-   Calm, precise, cool. Minimal and mostly monochrome, with one cool slate-blue
-   accent used sparingly. Dark by default, with a light theme available.
-
-   Contents
-   1 Tokens        2 Base          3 Typography     4 Layout
-   5 Components    6 Accessibility 7 Motion         8 Header & nav
-   9 Hero          10 Proven Impact 11 Selected Work 12 Image viewer
-   13 Skills       14 Experience   15 Honors        16 Certifications
-   17 About        18 Contact      19 Footer
-
-   Breakpoints (media queries cannot read variables):
-   600px small tablet · 900px two-column layouts · 1100px hero portrait
-   beside text · 1200px desktop navigation
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Design tokens
-   -------------------------------------------------------------------------- */
+/* -1. Design tokens - */
 :root {
   color-scheme: light;
 
@@ -25,33 +6,33 @@
   --bg: #F5F5F3;
   --surface: #FFFFFF;
   --text: #171717;
-  --text-muted: #6B6B6B;   /* metadata only: dates, captions, labels */
+  --text-muted: #6B6B6B;   
   --border: #D8D8D5;
   --accent: #4A607A;
-  --error: #B3261E;        /* form validation only */
-  --available: #2FBF71;    /* availability dot only */
+  --error: #B3261E;       
+  --available: #2FBF71;    
 
-  /* Derived from the colors above, so they follow the theme automatically */
-  --text-soft: color-mix(in srgb, var(--text) 78%, var(--bg)); /* supporting reading text */
+ 
+  --text-soft: color-mix(in srgb, var(--text) 78%, var(--bg)); 
   --rule: 1px solid var(--border);
   --rule-strong: 1px solid color-mix(in srgb, var(--text) 38%, var(--border));
-  --tint: color-mix(in srgb, var(--text) 6%, transparent);     /* faint fill for chips */
+  --tint: color-mix(in srgb, var(--text) 6%, transparent);    
   --tint-hover: color-mix(in srgb, var(--text) 11%, transparent);
 
-  --metal: linear-gradient(135deg, #E4E4E0 0%, #A8A8A2 35%, #F0F0EC 55%, #8E8E88 100%); /* honors edge */
-  --icon-tile: transparent; /* white in dark mode so colored logos stay readable */
+  --metal: linear-gradient(135deg, #E4E4E0 0%, #A8A8A2 35%, #F0F0EC 55%, #8E8E88 100%); 
+  --icon-tile: transparent; 
 
   /* Typography */
   --font-sans: "Inter", "Geist", "Satoshi", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-  --fs-label: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);   /* section labels, caps metadata */
-  --fs-meta: 0.875rem;                                       /* captions, dates */
-  --fs-small: 1rem;                                          /* supporting reading text */
-  --fs-body: clamp(1.0625rem, 1rem + 0.3vw, 1.125rem);       /* body */
-  --fs-lead: clamp(1.125rem, 1.04rem + 0.4vw, 1.3125rem);    /* section descriptions */
-  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);         /* subheadings */
-  --fs-h2: clamp(2rem, 1.5rem + 2vw, 3rem);                  /* section headings */
-  --fs-h1: clamp(2.625rem, 1.9rem + 3.4vw, 5rem);            /* name */
+  --fs-label: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);   
+  --fs-meta: 0.875rem;                                      
+  --fs-small: 1rem;                                          
+  --fs-body: clamp(1.0625rem, 1rem + 0.3vw, 1.125rem);       
+  --fs-lead: clamp(1.125rem, 1.04rem + 0.4vw, 1.3125rem);   
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);         
+  --fs-h2: clamp(2rem, 1.5rem + 2vw, 3rem);                 
+  --fs-h1: clamp(2.625rem, 1.9rem + 3.4vw, 5rem);            
 
   --fw-medium: 500;
   --fw-semibold: 600;
@@ -61,8 +42,8 @@
   --lh-snug: 1.3;
   --lh-body: 1.65;
 
-  --measure: 66ch;        /* longest comfortable paragraph */
-  --measure-lead: 56ch;   /* section descriptions */
+  --measure: 66ch;        
+  --measure-lead: 56ch;   
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -74,9 +55,9 @@
   --space-7: 3rem;
 
   /* Vertical rhythm */
-  --stack-section: clamp(4.5rem, 3.5rem + 4.5vw, 7.5rem); /* around a section */
-  --stack-head: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);      /* section heading to content */
-  --stack-group: clamp(2rem, 1.5rem + 2vw, 3rem);         /* between groups in a section */
+  --stack-section: clamp(4.5rem, 3.5rem + 4.5vw, 7.5rem); 
+  --stack-head: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);      
+  --stack-group: clamp(2rem, 1.5rem + 2vw, 3rem);       
 
   /* Layout */
   --container: 1280px;
@@ -88,11 +69,10 @@
   /* Motion */
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --dur: 200ms;
-  --beat: 480ms; /* one beat at 125 BPM; entrances stagger in quarter-beat steps (120ms) */
+  --beat: 480ms; 
 }
 
-/* Dark theme (the default). main.js sets data-theme on <html>. The media query
-   only matters when JavaScript is off: it then follows the system setting. */
+/* Dark theme (the default). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
@@ -123,9 +103,7 @@
   --icon-tile: #FFFFFF;
 }
 
-/* --------------------------------------------------------------------------
-   2. Reset & base
-   -------------------------------------------------------------------------- */
+/* -2. Reset & base- */
 *,
 *::before,
 *::after {
@@ -138,7 +116,7 @@ html {
   scroll-padding-top: var(--nav-h);
 }
 
-/* Locks page scroll while the mobile menu or the image viewer is open */
+/* Locks page scroll */
 html.nav-open,
 html.modal-open {
   overflow: hidden;
@@ -186,10 +164,7 @@ main:focus {
   color: var(--bg);
 }
 
-/* --------------------------------------------------------------------------
-   3. Typography
-   Five levels: section label · main heading · subheading · body · metadata.
-   -------------------------------------------------------------------------- */
+/* -3. Typography - */
 h1,
 h2,
 h3 {
@@ -230,9 +205,7 @@ p {
   line-height: 1.5;
 }
 
-/* --------------------------------------------------------------------------
-   4. Layout
-   -------------------------------------------------------------------------- */
+/* -4. Layout- */
 .container {
   width: min(100% - 2 * var(--page-pad), var(--container));
   margin-inline: auto;
@@ -273,9 +246,7 @@ p {
   color: var(--accent);
 }
 
-/* --------------------------------------------------------------------------
-   5. Components
-   -------------------------------------------------------------------------- */
+/* -5. Components -*/
 .btn-group {
   display: flex;
   flex-wrap: wrap;
@@ -396,8 +367,7 @@ p {
   background: var(--accent);
 }
 
-/* Logo slot (company, school, certification category). Shows a generic glyph
-   until the logo file loads, then switches to the logo. */
+/* Logo slot (company, school, certification category). */
 .logo {
   position: relative;
   display: grid;
@@ -442,9 +412,7 @@ p {
   opacity: 1;
 }
 
-/* --------------------------------------------------------------------------
-   6. Accessibility helpers
-   -------------------------------------------------------------------------- */
+/* -6. Accessibility helpers -*/
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -480,12 +448,7 @@ p {
   border: 0;
 }
 
-/* --------------------------------------------------------------------------
-   7. Motion
-   Entrances use a keyframe animation rather than a transition, so once an
-   element has appeared it is a normal element again and hover effects work.
-   Only hidden when JS is running, so content never depends on it.
-   -------------------------------------------------------------------------- */
+/* -7. Motion-*/
 html.js .reveal:not(.is-visible) {
   opacity: 0;
 }
@@ -537,12 +500,7 @@ html.js .reveal.is-visible {
   }
 }
 
-/* --------------------------------------------------------------------------
-   8. Site header & navigation
-   Below 1200px: full-screen menu overlay. From 1200px: inline links.
-   The blur sits on ::before because backdrop-filter on the header itself would
-   trap the fixed-position mobile overlay inside the header's box.
-   -------------------------------------------------------------------------- */
+/* -8. Site header & navigation -*/
 .site-header {
   position: fixed;
   top: 0;
@@ -636,7 +594,7 @@ html.js .reveal.is-visible {
   white-space: nowrap;
 }
 
-/* Static green dot with a soft glow */
+
 .availability__dot {
   flex: none;
   width: 10px;
@@ -692,7 +650,7 @@ html.js .reveal.is-visible {
 }
 
 html:not(.js) .theme-toggle {
-  display: none; /* needs JavaScript */
+  display: none; 
 }
 
 @media (max-width: 1199.98px) {
@@ -863,11 +821,7 @@ html:not(.js) .theme-toggle {
   }
 }
 
-/* --------------------------------------------------------------------------
-   9. Hero
-   Uses a CSS animation (not .reveal) so the largest element appears quickly.
-   Portrait stacks above the text on small screens and sits beside it from 1100px.
-   -------------------------------------------------------------------------- */
+/* -9. Hero- */
 .hero {
   display: flex;
   align-items: center;
@@ -941,7 +895,6 @@ html:not(.js) .theme-toggle {
   max-width: 46ch;
 }
 
-/* Telemetry-style metadata row, with gauge-like ticks hanging from its rule */
 .telemetry {
   position: relative;
   display: grid;
@@ -979,10 +932,7 @@ html:not(.js) .theme-toggle {
   }
 }
 
-/* --------------------------------------------------------------------------
-   10. Proven Impact
-   Four figures divided by hairlines. The numbers count up once (JS).
-   -------------------------------------------------------------------------- */
+/* -10. Proven ImpactFour figures divided by hairlines. The numbers count up once (JS). -*/
 .metrics {
   display: grid;
   grid-template-columns: 1fr;
@@ -1060,11 +1010,7 @@ html:not(.js) .theme-toggle {
   }
 }
 
-/* --------------------------------------------------------------------------
-   11. Selected Work
-   Each project reads top to bottom: title, what it is, role, key contributions,
-   stack, evidence. From 900px the summary and facts sit beside the contributions.
-   -------------------------------------------------------------------------- */
+/* -11. Selected Work- */
 .section--tint .shot__frame {
   background: var(--bg);
 }
@@ -1111,7 +1057,7 @@ html:not(.js) .theme-toggle {
   margin: 0 0 var(--space-4);
 }
 
-/* Role first, then dates or context, on one quiet line */
+
 .project__facts {
   display: flex;
   flex-wrap: wrap;
@@ -1167,7 +1113,7 @@ html:not(.js) .theme-toggle {
   }
 }
 
-/* Numbered captions (the number is generated, so it stays out of the viewer caption) */
+/* Numbered captions */
 .evidence .shot figcaption {
   display: flex;
   align-items: baseline;
@@ -1196,8 +1142,7 @@ html:not(.js) .theme-toggle {
   line-height: 1.5;
 }
 
-/* The frame is a button so loaded images open by keyboard. Until the image file
-   exists it renders as a labelled placeholder. */
+
 .shot__frame {
   position: relative;
   display: flex;
@@ -1437,11 +1382,7 @@ html:not(.js) .logo__img {
   line-height: 1.5;
 }
 
-/* --------------------------------------------------------------------------
-   13. Technical Skills
-   Category on the left, chips on the right, one hairline between categories.
-   Icons are full-color; in dark mode they sit on a small white tile.
-   -------------------------------------------------------------------------- */
+/* -13. Technical Skills -*/
 .skill-group {
   display: grid;
   gap: var(--space-4) var(--gutter);
@@ -1492,8 +1433,6 @@ html:not(.js) .logo__img {
   }
 }
 
-/* Slow ticker under the list. main.js duplicates the list and adds .is-ready;
-   the track then slides left by exactly one list, so the loop has no seam. */
 .ticker {
   margin-top: var(--stack-group);
   overflow: hidden;
@@ -1538,7 +1477,6 @@ html:not(.js) .logo__img {
   color: var(--text);
 }
 
-/* A slash after every item, including the last, keeps the spacing even at the seam */
 .ticker__list li::after {
   content: "/";
   margin-inline: 1.5rem;
@@ -1555,9 +1493,7 @@ html:not(.js) .logo__img {
   }
 }
 
-/* --------------------------------------------------------------------------
-   14. Experience & Education — minimal vertical timeline
-   -------------------------------------------------------------------------- */
+/*- 14. Experience & Education — minimal vertical timeline -*/
 .timeline-groups {
   display: grid;
   gap: var(--stack-section) var(--gutter);
@@ -1660,11 +1596,7 @@ html:not(.js) .logo__img {
   margin-bottom: var(--space-5);
 }
 
-/* --------------------------------------------------------------------------
-   15. Honors & Awards
-   Three cards, each an image slot above its text, with a thin metallic-style
-   edge (a gradient border that still follows the 4px radius).
-   -------------------------------------------------------------------------- */
+/*- 15. Honors & Awards -*/
 .honors {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
@@ -1743,11 +1675,7 @@ html:not(.js) .logo__img {
   line-height: 1;
 }
 
-/* --------------------------------------------------------------------------
-   16. Certifications
-   Four groups (two columns on desktop), each a ruled list. main.js adds the
-   Expand and Visit buttons to a row only when they have something to open.
-   -------------------------------------------------------------------------- */
+/*- 16. Certifications -*/
 .cert-grid {
   display: grid;
   gap: var(--stack-group) var(--gutter);
@@ -1850,12 +1778,7 @@ html:not(.js) .logo__img {
   border-color: var(--text);
 }
 
-/* --------------------------------------------------------------------------
-   17. About
-   Intro and optional photo on the left (5 cols), content on the right (6 cols)
-   from 900px. On tall screens the intro stays pinned while the right column
-   scrolls. Blocks are separated by whitespace.
-   -------------------------------------------------------------------------- */
+/*-17. About -*/
 .about__grid {
   display: grid;
   gap: var(--stack-group) var(--gutter);
@@ -1996,11 +1919,7 @@ html:not(.js) .logo__img {
   }
 }
 
-/* --------------------------------------------------------------------------
-   18. Contact
-   Intro and direct links on the left (5 cols), form on the right (6 cols)
-   from 900px. The form needs JS, so it is hidden without it.
-   -------------------------------------------------------------------------- */
+/*- 18. Contact -*/
 .contact__grid {
   display: grid;
   gap: var(--stack-group) var(--gutter);
@@ -2146,9 +2065,7 @@ textarea.field__control {
   line-height: 1.5;
 }
 
-/* --------------------------------------------------------------------------
-   19. Footer
-   -------------------------------------------------------------------------- */
+/*- 19. Footer -*/
 .site-footer {
   padding-block: var(--space-6);
   border-top: var(--rule);
