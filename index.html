@@ -6,14 +6,12 @@
   <title>Marc Santos — QA &amp; Web Dev</title>
   <meta name="description" content="Portfolio of Marc Jansen V. Santos, QA Tester and BS Information Technology graduate (Cum Laude). I test, build, and improve web applications with a focus on reliability, usability, and precision.">
   <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#101317"> <!-- kept in sync with the theme by main.js -->
+  <meta name="theme-color" content="#101317"> 
 
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Runs before the page paints: enables JS-only styles and applies the saved
-       theme (dark by default), so there is no flash of the wrong theme. -->
   <script>
     (function () {
       var root = document.documentElement;
@@ -137,12 +135,6 @@
       </div>
     </section>
 
-    <!-- Selected Work
-         Screenshot slots show their expected file name until the image exists, then
-         switch to it. Save images in assets/images/projects/. If a file has another
-         extension, change it in both src and data-path. Edit alt and caption to match.
-         Frame styles: shot--window for screenshots, shot--contain for documents,
-         plain for photos. Only publish images you may share, and use sample data. -->
     <section class="section section--bordered section--tint" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="section-head">
@@ -234,7 +226,7 @@
                 <li>PHP</li>
                 <li>MySQL</li>
               </ul>
-              <!-- Replace the href if your repository URL differs, or delete this paragraph if the repo is private. -->
+    
               <p class="project__link">
                 <a class="text-link" href="https://github.com/mjvsantos/Hydrolink_SmartWaterSystem" target="_blank" rel="noopener noreferrer">
                   View on GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
@@ -300,7 +292,7 @@
                 <li>CSS</li>
                 <li>Git/GitHub</li>
               </ul>
-              <!-- Replace the href if your repository URL differs, or delete this paragraph if the repo is private. -->
+             
               <p class="project__link">
                 <a class="text-link" href="https://github.com/mjvsantos/SBCA_ClinicManagementSystem" target="_blank" rel="noopener noreferrer">
                   View on GitHub <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span>
@@ -340,9 +332,7 @@
       </div>
     </section>
 
-    <!-- Technical Skills
-         Icons are in assets/icons/skills/ and are decorative (empty alt) because the
-         skill name sits beside them. -->
+    <!-- Technical Skills -->
     <section class="section section--bordered" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <div class="section-head">
@@ -405,8 +395,6 @@
           </div>
         </div>
 
-        <!-- Decorative ticker, hidden from screen readers. main.js duplicates this
-             list so the loop is seamless; edit only this one list. -->
         <div class="ticker reveal" aria-hidden="true">
           <div class="ticker__track">
             <ul class="ticker__list">
@@ -438,9 +426,7 @@
       </div>
     </section>
 
-    <!-- Experience & Education
-         Each logo slot shows a generic icon until its file exists (assets/images/logos/:
-         1902.png, san-beda.png, st-paul.png). If a file is not a .png, change its src. -->
+    <!-- Experience & Education -->
     <section class="section section--bordered" id="experience" aria-labelledby="experience-title">
       <div class="container">
         <div class="section-head">
@@ -516,9 +502,7 @@
       </div>
     </section>
 
-    <!-- Honors & Awards
-         Image slots work like the project screenshots. Save files in assets/images/honors/:
-         cum-laude-medal.jpg, dean-list.jpg, annual-honor-roll.jpg. -->
+    <!-- Honors & Awards -->
     <section class="section section--bordered" id="honors" aria-labelledby="honors-title">
       <div class="container">
         <div class="section-head">
@@ -568,14 +552,7 @@
       </div>
     </section>
 
-    <!-- Certifications
-         main.js adds the buttons to each row:
-           Expand  appears when the image in data-cert exists (assets/certificates/;
-                   change the extension there if yours is a .png).
-           Visit   appears when data-credly holds an https link.
-         Delete a row's data-cert if you will not add an image for it.
-         Category logos are optional: assets/images/logos/certiport.png, cisco.png,
-         microsoft.png, professional.png. -->
+    <!-- Certifications -->
     <section class="section section--bordered" id="certifications" aria-labelledby="certifications-title">
       <div class="container">
         <div class="section-head">
@@ -689,9 +666,7 @@
       </div>
     </section>
 
-    <!-- About
-         The photo is optional: save it as assets/images/about/me.jpg, or delete the
-         <figure> to remove the slot. -->
+    <!-- About -->
     <section class="section section--bordered" id="about" aria-labelledby="about-title">
       <div class="container about__grid">
         <div class="about__intro">
@@ -866,8 +841,6 @@
     </div>
   </footer>
 
-  <!-- Image viewer for screenshots, honors and certificates (native <dialog>:
-       Escape closes it and focus returns to the element that opened it) -->
   <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
     <div class="lightbox__bar">
       <button class="btn btn--secondary lightbox__close" type="button">Close</button>
